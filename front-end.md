@@ -28,8 +28,8 @@ Create a catalog front that allows user to search and list products
 
 Technical spec
 --------------
-* All data required for this prototype is available on [Edfa3ly Test API](http://test-api.edfa3ly.io)
-* Choose any JavaScript framework/library. We are familiar with Angular/React.
+* All data can be created and hardcoded into the application. No need to connect to APIs etc. if you want to skip this. There is not a need for a large number of data, just enough to test the application. Make sure to make this clear in code and in your readme.
+* Choose any JavaScript framework/library. We are familiar with Vue.
 * Use UI framework to make the interface as polished as possible.
 
 How will we review?

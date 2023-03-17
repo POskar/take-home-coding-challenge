@@ -30,7 +30,7 @@ Mockup notes:
 
 Technical spec
 --------------
-* All data required for this prototype is available on [Edfa3ly Test API](http://test-api.edfa3ly.io)
+* All data can be created and hardcoded into the application. No need to connect to APIs etc. if you want to skip this. There is not a need for a large number of data, just enough to test the application. Make sure to make this clear in code and in your readme.
 * Swift and Auto Layout constrains are preferred.
 
 How will we review?
