@@ -29,3 +29,7 @@ Bonus point (those items are optional):
 - **UX**: is the web interface understandable and pleasing to use? Is the API intuitive?
 - **Scalability**: will technical choices scale well? If not, is there a discussion of those choices in the README?
 - **Production-readiness**: does the code include monitoring? Logging? Proper error handling?
+
+## Ready to get started
+
+[Start by reading the task description here](backend.md)
