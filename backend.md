@@ -25,6 +25,11 @@ The program should have two main endpoints:
 2. Well documented with comments as if it would be production ready.
 3. Use pre-defined Design Patterns whenever needed in your code.
 4. Input and output should be via a simple REST API.
+5. Write your README as if it was for a production service. Include the following items:
+   - Description of the problem and solution.
+   - Whether the solution focuses on back-end, front-end or if it's full stack.
+   - Reasoning behind your technical choices, including architectural.
+   - Trade-offs you might have made, anything you left out, or what you might do differently if you were to spend additional time on the project.
 
 ## Expected Deliverables
 
