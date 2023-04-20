@@ -1,13 +1,6 @@
 # Relynk take home coding challenge
 
-## Readme
-
-Write your README as if it was for a production service. Include the following items:
-
-- Description of the problem and solution.
-- Whether the solution focuses on back-end, front-end or if it's full stack.
-- Reasoning behind your technical choices, including architectural.
-- Trade-offs you might have made, anything you left out, or what you might do differently if you were to spend additional time on the project.
+We at Relynk are looking forward to seeing what you can do! Below are some general guidelines, and at the bottom is a link to your task.
 
 ## How we review
 
