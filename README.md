@@ -1,4 +1,4 @@
-# Take home coding challenge
+# Relynk take home coding challenge
 
 ## Readme
 
@@ -13,7 +13,7 @@ Write your README as if it was for a production service. Include the following i
 
 Your application will be reviewed by at our engineers. We do take into consideration your experience level.
 
-**We value quality over feature-completeness**. It is fine to leave things aside provided you call them out in your project's README. The goal of this code sample is to help us identify what you consider production-ready code. You should consider this code ready for final review with your colleague, i.e. this would be the last step before deploying to production. **This does not however mean you have to setup databases etc. Its fine to hard code for example shopping cart items and prices etc. in code for these challanges as long as you add a comment about it.**
+**We value quality over feature-completeness**. It is fine to leave things aside provided you call them out in your project's README. The goal of this code sample is to help us identify what you consider production-ready code. You should consider this code ready for final review with your colleague, i.e. this would be the last step before deploying to production.
 
 The aspects of your code we will assess include:
 
@@ -28,4 +28,4 @@ Bonus point (those items are optional):
 
 - **UX**: is the web interface understandable and pleasing to use? Is the API intuitive?
 - **Scalability**: will technical choices scale well? If not, is there a discussion of those choices in the README?
-- **Production-readiness**: does the code include monitoring? logging? proper error handling?
+- **Production-readiness**: does the code include monitoring? Logging? Proper error handling?
