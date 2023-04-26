@@ -30,7 +30,7 @@ The proposed architecture consists of:
 
 This approach provides several advantages, including improved scalability, maintainability, and testability.
 
-### Further imporvements
+### Further improvements
 
 Trade-offs were made to keep the project scope manageable within the given time frame. Main focus was on the backend of the project so it could be further improved by adding a frontend - at least in a simple form of an html document that would allow to display received JSON files or post new sensor data with the use of a form. Additional features like user authentication and using HTTPS protocol for requests could be added to improve the security if more time was allocated. Furthermore, unit tests can be included in the development process of a software project to verify the functionality of individual units or components of the code.
 
