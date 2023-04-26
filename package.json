@@ -1,0 +1,20 @@
+{
+  "name": "take-home-coding-challenge",
+  "version": "1.0.0",
+  "description": "Completed solution for a 'take home coding challenge' from Relynk company.",
+  "main": "server.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Oskar Pieniak",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "mongoose": "^7.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
