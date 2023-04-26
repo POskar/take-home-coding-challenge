@@ -6,17 +6,33 @@ The original [README](misc/README.md), with the instruction, can be found inside
 
 ## Content
 
+### Description
 This project is a RESTful API that can efficiently process and store real estate sensor data from multiple rooms and query aggregated data over different time periods, measurement types, and resolutions. It provides two main endpoints - one to store the sensor data and another to query the stored data based on the provided parameters.
 
-The solution focuses on the backend and is implemented in Node.js with Express.js framework. One reason for using Express.js is that it provides a robust framework for building RESTful APIs quickly and easily. Its simplicity and flexibility make it a popular choice for developers, allowing them to easily handle HTTP requests, routing, middleware, and error handling. The data is stored in a locally hosted MongoDB database using mongoose library for efficient querying and management.
+### Libraries
+The solution focuses on the backend and is implemented in Node.js with Express.js framework. One reason for using Express.js is that it provides a robust framework for building RESTful APIs quickly and easily. Its simplicity and flexibility make it a popular choice for developers, allowing them to easily handle HTTP requests, routing, middleware, and error handling. 
+
+The data is stored in a locally hosted MongoDB database using mongoose library for efficient querying and management.
 
 To handle data coming in from different time zones, the API uses the moment library to convert incoming timestamps to UTC before storing them in the database.
-
+### Testing
 In order to test the API it was debugged and a number of queries were run using Postman software.
 
 The API allows the user to query data based on start and end times, measurement type, room, and time resolution (raw, hourly, daily, weekly). Each parameter is optional to provide flexibility to the user. If the resolution is not set to "raw," the API calculates the average value of all the values that fall within a time bucket of the chosen resolution.
 
-Trade-offs were made to keep the project scope manageable within the given time frame. Main focus was on the backend of the project so it could be further improved by adding a frontend - at least in a simple form of an html document that would allow to display received JSON files or post new sensor data with the use of a form. Additional features like data visualization and user authentication could be added if more time was allocated.
+### Architecture
+The current architecture of the project is based on the Express.js framework and follows a simple two-layered approach of handling HTTP requests and accessing the database using Mongoose. However, as the project grows and becomes more complex, it could benefit from a three-layered architecture.
+
+The proposed architecture consists of:
+- web layer responsible for handling HTTP requests and responses,
+- service layer that encapsulates the business logic and performs data validation
+- data access layer that interacts with the database. 
+
+This approach provides several advantages, including improved scalability, maintainability, and testability.
+
+### Further imporvements
+
+Trade-offs were made to keep the project scope manageable within the given time frame. Main focus was on the backend of the project so it could be further improved by adding a frontend - at least in a simple form of an html document that would allow to display received JSON files or post new sensor data with the use of a form. Additional features like user authentication and using HTTPS protocol for requests could be added to improve the security if more time was allocated. Furthermore, unit tests can be included in the development process of a software project to verify the functionality of individual units or components of the code.
 
 ## Prerequisities
 
