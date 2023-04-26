@@ -6,8 +6,15 @@ const SensorData = require('../models/SensorData')
 // store sensor data
 router.post('/', async (req, res) => {
     try { 
-      // splicing the datatime from the json as there is an error with the last character
-      datetime = req.body.Datetime.substring(0, req.body.Datetime.length - 1)
+      // check if passed datetime complies with ISO 8601 standard
+      datetime = req.body.Datetime
+      if (!isIsoDate(datetime)) {
+        if (datetime.slice(-1) == "T") {
+          datetime = datetime.slice(0, - 1)
+        } else {
+          return res.status(400).json({message: "Invalid date time format."})
+        }
+      }
       // create new SensorData document
       const sensorData = new SensorData({
         value: req.body.Value,
@@ -28,31 +35,37 @@ router.post('/', async (req, res) => {
   
 // query sensor data
 router.get('/', async (req, res) => {
-    const { start, end, measurement, room, resolution = 'raw' } = req.query
-  
-    let query = {}
-    if (start && end) {
-      query.datetime = { $gte: new Date(start), $lt: new Date(end) }
-    }
-    if (measurement) {
-      query.measurement = measurement
-    }
-    if (room) {
-      query.room = room
-    }
-  
-    let data
-    try {
-      data = await SensorData.find(query)
+  const { start, end, measurement, room, resolution = 'raw' } = req.query
 
-      if (data.length == 0) {
-        return res.status(404).json({ message: 'Cannot find any sensor read that matches this criteria.' })
-      }
-      res.status(200).json(data)
-    } catch (error) {
-      console.error(error)
-      res.status(500).json({ message: error.message})
+  let query = {}
+  if (start && end) {
+    query.datetime = { $gte: new Date(start), $lt: new Date(end) }
+  }
+  if (measurement) {
+    query.measurement = measurement
+  }
+  if (room) {
+    query.room = room
+  }
+
+  let data
+  try {
+    data = await SensorData.find(query)
+
+    if (data.length == 0) {
+      return res.status(404).json({ message: 'Cannot find any sensor read that matches this criteria.' })
     }
+    res.status(200).json(data)
+  } catch (error) {
+    console.error(error)
+    res.status(500).json({ message: error.message})
+  }
 })
+
+function isIsoDate(str) {
+  if (!/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z/.test(str)) return false;
+  const d = new Date(str); 
+  return d instanceof Date && !isNaN(d) && d.toISOString()===str; // valid date 
+}
 
 module.exports = router
